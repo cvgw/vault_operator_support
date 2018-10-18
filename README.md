@@ -1,5 +1,8 @@
 # Description
 Some useful tools for working with the coreos vault operator
+# Prerequisites
+* Locally running Kubernetes Cluster
+* The Vault CLI
 # Getting started
 Clone the repo for the [coreos vault operator](https://github.com/coreos/vault-operator)
 ```
