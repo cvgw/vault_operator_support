@@ -4,6 +4,11 @@ export VAULT_FORMAT=json
 export VAULT_ADDR=https://localhost:8200
 export VAULT_SKIP_VERIFY=true
 
+if ! [ -x "$(command -v vault)" ]; then
+  echo 'vault executable must be present'
+  exit 1
+fi
+
 function connect_to_vault_instance {
   POD_ID=$(kubectl -n default get vault example -o jsonpath='{.status.vaultStatus.sealed[0]}')
   if [ -z "${POD_ID}" ]

@@ -4,21 +4,13 @@ Some useful tools for working with the coreos vault operator
 * Locally running Kubernetes Cluster
 * The Vault CLI
 # Getting started
-Clone the repo for the [coreos vault operator](https://github.com/coreos/vault-operator)
-```
-git clone git@github.com:coreos/vault-operator
-```
 Clone this repo
 ```
 git clone git@github.com:cvgw/vault_operator_support
 ```
-Navigate to the root of the coreos/vault-operator
+Install the helm chart
 ```
-cd ~/src/github.com/coreos/vault-operator
-```
-With your K8s cluster accessable via `kubectl` create the operator resources using the script in vault_operator_support
-```
-$ ~/src/github.com/cvgw/vault_operator_support/init_resources.sh
+helm install vault-operator
 ```
 Create the example vault cluster
 ```
